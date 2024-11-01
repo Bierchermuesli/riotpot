@@ -25,6 +25,7 @@ COPY statik/ statik/
 COPY build build/
 
 ADD Makefile .
+RUN chmod +x build/compile.sh
 RUN make compile
 
 FROM golang:1.21 AS release
